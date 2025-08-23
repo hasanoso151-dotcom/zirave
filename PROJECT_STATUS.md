@@ -1,6 +1,6 @@
 # ZİRAVE - Project Status & Roadmap (Supabase Edition)
 
-## Last Update: 2025-01-11
+## Last Update: 2025-01-11 (Task 1.1.3 Complete)
 
 ---
 
@@ -25,7 +25,7 @@ ZİRAVE is a comprehensive digital ecosystem for the agricultural sector, connec
     **[✓] 1.1: Project Scaffolding & Supabase Integration**
         **[✓] 1.1.1:** Create root directory structure (`/mobile`, `/web-dashboard`, `/backend-custom`, `/ai-service`).
         **[✓] 1.1.2:** Initialize React Native project (`/mobile`).
-        **[ ] 1.1.3:** Initialize Next.js project (`/web-dashboard`).
+        **[✓] 1.1.3:** Initialize Next.js project (`/web-dashboard`).
         **[ ] 1.1.4:** Initialize NestJS project (`/backend-custom`).
         **[ ] 1.1.5:** Install Supabase CLI and initialize Supabase project (`/supabase`). This will contain DB migrations.
         **[ ] 1.1.6:** Create a central `.env` file with placeholders for Supabase URL and ANON_KEY.
@@ -60,11 +60,11 @@ ZİRAVE is a comprehensive digital ecosystem for the agricultural sector, connec
 ---
 
 ## Current Focus
-Phase 1.3 Complete: Mobile App with Supabase Integration & Auth - Ready for Next.js Web Dashboard
+Phase 1.1 Progress: Next.js Web Dashboard initialized - Ready for NestJS Backend
 
 ## Next Actions
-1. Initialize Next.js project in `/web-dashboard` directory  
-2. Initialize NestJS project in `/backend-custom` directory
+1. Initialize NestJS project in `/backend-custom` directory
+2. Initialize Supabase project structure with database migrations
 3. Initialize Supabase project structure with database migrations
 4. Setup Supabase authentication and RLS policies
 
