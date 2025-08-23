@@ -1,22 +1,22 @@
-# ZİRAVE - Digital Agricultural Ecosystem
+# ZİRAVE - Digital Agricultural Ecosystem (Supabase Edition)
 
-**ZİRAVE** is a comprehensive digital platform designed to revolutionize the agricultural sector by connecting farmers, suppliers, agricultural workers, and engineers in a unified ecosystem.
+**ZİRAVE** is a comprehensive digital platform designed to revolutionize the agricultural sector by connecting farmers, suppliers, agricultural workers, and engineers in a unified ecosystem, powered by Supabase.
 
 ## 🌱 Vision
 To create the most comprehensive and user-friendly agricultural platform that leverages cutting-edge technology to solve real-world farming challenges while fostering community collaboration.
 
-## 🏗️ Architecture
+## 🏗️ Architecture (Supabase-Centric)
 
 ### Core Components
 - **Mobile App** (React Native + TypeScript) - Primary user interface
 - **Web Dashboard** (Next.js + TypeScript) - Administrative and analytics interface  
-- **Backend API** (NestJS + TypeScript) - Core business logic and data management
+- **Backend Core** (Supabase) - Database, Auth, Storage, Edge Functions
+- **Custom Backend** (NestJS + TypeScript) - Complex business logic and AI integration
 - **AI Service** (Python + FastAPI) - Agricultural diagnostics and recommendations
-- **Database** (PostgreSQL + PostGIS) - Data persistence with geographical capabilities
 
 ### Key Features
-- **Identity & Authentication** - Phone-based OTP verification
-- **Secure Communications** - End-to-end encrypted chat system
+- **Identity & Authentication** - Phone-based OTP verification via Supabase Auth
+- **Secure Communications** - Real-time chat using Supabase Realtime
 - **Smart Marketplace** - Agricultural product and service trading
 - **AI Diagnostics** - Plant disease detection and treatment recommendations
 - **Logistics Management** - Supply chain and delivery coordination
@@ -24,7 +24,7 @@ To create the most comprehensive and user-friendly agricultural platform that le
 
 ## 🚀 Development Status
 
-Currently in **Phase 1: Foundation** - setting up core infrastructure and authentication systems.
+Currently in **Phase 1: Foundation** - setting up Supabase integration and core infrastructure.
 
 See [PROJECT_STATUS.md](./PROJECT_STATUS.md) for detailed roadmap and current progress.
 
@@ -32,9 +32,9 @@ See [PROJECT_STATUS.md](./PROJECT_STATUS.md) for detailed roadmap and current pr
 
 ### Prerequisites
 - Node.js 18+
-- Docker & Docker Compose
+- React Native CLI
 - Android Studio / Xcode (for mobile development)
-- PostgreSQL (via Docker)
+- Supabase CLI
 
 ### Quick Start
 ```bash
@@ -46,7 +46,6 @@ cd zirave
 npm run install:all
 
 # Start development environment
-docker-compose up -d
 npm run dev:all
 ```
 
@@ -55,10 +54,10 @@ npm run dev:all
 zirave/
 ├── mobile/           # React Native mobile application
 ├── web-dashboard/    # Next.js web dashboard
-├── backend/          # NestJS API server
+├── backend-custom/   # NestJS custom backend logic
 ├── ai-service/       # Python FastAPI AI service
+├── supabase/         # Supabase migrations and functions
 ├── docs/            # Documentation and specifications
-├── docker-compose.yml
 └── PROJECT_STATUS.md # Live project roadmap and status
 ```
 

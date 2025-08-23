@@ -1,78 +1,77 @@
-# ZİRAVE - Project Status & Roadmap
+# ZİRAVE - Project Status & Roadmap (Supabase Edition)
 
 ## Last Update: 2025-01-11
 
 ---
 
 ## Overall Vision
-ZİRAVE is a comprehensive digital ecosystem for the agricultural sector, connecting farmers, suppliers, workers, and engineers. It leverages AI for diagnostics and recommendations, all within a simple, user-friendly interface.
+ZİRAVE is a comprehensive digital ecosystem for the agricultural sector, connecting farmers, suppliers, workers, and engineers. It leverages Supabase for its backend infrastructure and a custom AI service for intelligence, all within a simple, user-friendly interface.
 
 ---
 
-## Technical Stack
+## Technical Stack (Supabase-centric)
 - **Mobile App:** React Native (with TypeScript)
 - **Web Dashboard:** Next.js (with TypeScript)
-- **Backend API:** NestJS (Node.js with TypeScript)
+- **Backend Core:** **Supabase** (PostgreSQL, Auth, Storage, Edge Functions)
+- **Custom Backend Logic:** **NestJS** (for complex tasks & interfacing with Supabase/AI)
 - **AI Service:** Python with FastAPI
-- **Database:** PostgreSQL with PostGIS extension
-- **Real-time Comms:** Socket.IO
-- **Deployment:** Docker containers for all services.
+- **Deployment:** Vercel for Web, Supabase for Backend, Docker for AI Service.
 
 ---
 
 ## Development Roadmap & Status
 
-**[ ] Phase 1: Foundation (Identity & Communication Core)**
-    **[✓] 1.1: Project Scaffolding & Environment Setup**
-        **[✓] 1.1.1:** Create root directory structure.
+**[ ] Phase 1: Foundation (Supabase & Frontend Setup)**
+    **[✓] 1.1: Project Scaffolding & Supabase Integration**
+        **[✓] 1.1.1:** Create root directory structure (`/mobile`, `/web-dashboard`, `/backend-custom`, `/ai-service`).
         **[ ] 1.1.2:** Initialize React Native project (`/mobile`).
         **[ ] 1.1.3:** Initialize Next.js project (`/web-dashboard`).
-        **[ ] 1.1.4:** Initialize NestJS project (`/backend`).
-        **[ ] 1.1.5:** Create Docker Compose file for PostgreSQL & Redis.
-    **[ ] 1.2: Backend - User & Auth Module**
-        **[ ] 1.2.1:** Setup Prisma and connect to PostgreSQL.
-        **[ ] 1.2.2:** Create `User` model with roles (FARMER, SUPPLIER, etc.).
-        **[ ] 1.2.3:** Implement phone-based OTP authentication (registration/login).
-        **[ ] 1.2.4:** Implement JWT for session management.
-        **[ ] 1.2.5:** Implement Role-Based Access Control (RBAC) guards.
-    **[ ] 1.3: Backend - Secure Chat Module**
-        **[ ] 1.3.1:** Create DB models for `Conversation` and `Message`.
-        **[ ] 1.3.2:** Implement Socket.IO Gateway in NestJS.
-        **[ ] 1.3.3:** Implement server-side content filtering (Regex for contacts).
-    **[ ] 1.4: Mobile App - Core UI & Auth**
-        **[ ] 1.4.1:** Setup i18n for Turkish language (`tr.json`).
-        **[ ] 1.4.2:** Implement navigation (React Navigation).
-        **[ ] 1.4.3:** Build login/registration screens using OTP flow.
-        **[ ] 1.4.4:** Implement state management (Redux Toolkit) for user session.
+        **[ ] 1.1.4:** Initialize NestJS project (`/backend-custom`).
+        **[ ] 1.1.5:** Install Supabase CLI and initialize Supabase project (`/supabase`). This will contain DB migrations.
+        **[ ] 1.1.6:** Create a central `.env` file with placeholders for Supabase URL and ANON_KEY.
+    **[ ] 1.2: Supabase Schema & Database Setup**
+        **[ ] 1.2.1:** Create first database migration in `/supabase/migrations` to define core tables: `profiles` (with roles), `products`, `conversations`, `messages`.
+        **[ ] 1.2.2:** Enable Phone-based Authentication in the Supabase dashboard settings.
+        **[ ] 1.2.3:** Setup Row Level Security (RLS) policies for the tables. (e.g., Users can only see their own conversations).
+    **[ ] 1.3: Mobile App - Supabase Integration & Auth**
+        **[ ] 1.3.1:** Install `@supabase/supabase-js` in the React Native project.
+        **[ ] 1.3.2:** Create a Supabase client helper (`/mobile/src/lib/supabase.ts`).
+        **[ ] 1.3.3:** Build login/registration screens using Supabase's phone OTP auth (`auth.signInWithOtp`).
+        **[ ] 1.3.4:** Implement state management (Redux Toolkit or Zustand) to handle the Supabase user session.
+        **[ ] 1.3.5:** Setup i18n for Turkish language (`tr.json`).
 
 **[ ] Phase 2: Marketplace Activation**
-    **[ ] 2.1: Backend - Marketplace Module**
-    **[ ] 2.2: Mobile App - Marketplace UI**
+    **[ ] 2.1: Mobile App - Marketplace UI & Logic**
+        **[ ] 2.1.1:** Build UI to display products fetched directly from Supabase DB.
+        **[ ] 2.1.2:** Implement "My Products" screen for suppliers using Supabase RLS.
+    **[ ] 2.2: Backend - Real-time Chat**
+        **[ ] 2.2.1:** Utilize Supabase Realtime Subscriptions for the chat system.
+        **[ ] 2.2.2:** Create a Supabase Edge Function to run server-side content filtering (Regex) on new messages.
 
 **[ ] Phase 3: Intelligence Integration**
     **[ ] 3.1: AI Service - Scaffolding & First Model**
-    **[ ] 3.2: Backend - AI Service Integration**
+    **[ ] 3.2: Custom Backend - AI Integration**
     **[ ] 3.3: Mobile App - Diagnostics UI**
 
 **[ ] Phase 4: Operations & Logistics**
-    **[ ] 4.1: Backend - Logistics Module**
+    **[ ] 4.1: Custom Backend - Logistics Module**
     **[ ] 4.2: Mobile App - Logistics UI**
 
 ---
 
 ## Current Focus
-Starting Phase 1: Foundation - Project Scaffolding & Environment Setup
+Starting Phase 1: Foundation - Project Scaffolding & Supabase Integration
 
 ## Next Actions
 1. Initialize React Native project in `/mobile` directory
 2. Initialize Next.js project in `/web-dashboard` directory  
-3. Initialize NestJS project in `/backend` directory
-4. Create Docker Compose configuration
+3. Initialize NestJS project in `/backend-custom` directory
+4. Initialize Supabase project structure
 
 ---
 
 ## Notes & Decisions
-- Starting with foundation layer to establish solid architectural base
-- Using TypeScript across all projects for type safety
-- Implementing phone-based OTP authentication as primary auth method
+- Switched to Supabase-centric architecture for faster development
+- Using Supabase for auth, database, storage, and edge functions
+- Custom NestJS backend only for complex business logic
 - Planning for Turkish localization from the start
