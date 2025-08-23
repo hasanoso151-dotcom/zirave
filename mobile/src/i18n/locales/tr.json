@@ -1,0 +1,73 @@
+{
+  "auth": {
+    "welcome": "ZİRAVE'ye Hoş Geldiniz",
+    "subtitle": "Tarımsal dijital ekosistem",
+    "phoneNumber": "Telefon Numarası",
+    "phoneNumberPlaceholder": "5XX XXX XX XX",
+    "sendOTP": "Doğrulama Kodu Gönder",
+    "verificationCode": "Doğrulama Kodu",
+    "verificationCodePlaceholder": "6 haneli kod",
+    "verify": "Doğrula",
+    "resendCode": "Kodu Tekrar Gönder",
+    "otpSent": "Doğrulama kodu {{phone}} numarasına gönderildi",
+    "invalidPhone": "Geçerli bir telefon numarası giriniz",
+    "invalidOTP": "Geçerli bir doğrulama kodu giriniz",
+    "loginFailed": "Giriş başarısız",
+    "verificationFailed": "Doğrulama başarısız"
+  },
+  "profile": {
+    "title": "Profil",
+    "fullName": "Ad Soyad",
+    "role": "Rol",
+    "roles": {
+      "FARMER": "Çiftçi",
+      "SUPPLIER": "Tedarikçi",
+      "WORKER": "İşçi",
+      "ENGINEER": "Mühendis"
+    },
+    "save": "Kaydet",
+    "logout": "Çıkış Yap",
+    "editProfile": "Profili Düzenle"
+  },
+  "marketplace": {
+    "title": "Pazar Yeri",
+    "search": "Ürün ara...",
+    "categories": "Kategoriler",
+    "myProducts": "Ürünlerim",
+    "addProduct": "Ürün Ekle",
+    "productName": "Ürün Adı",
+    "description": "Açıklama",
+    "price": "Fiyat",
+    "category": "Kategori",
+    "noProducts": "Henüz ürün bulunmuyor",
+    "contactSeller": "Satıcıyla İletişime Geç"
+  },
+  "chat": {
+    "title": "Mesajlar",
+    "conversations": "Konuşmalar",
+    "typeMessage": "Mesaj yazın...",
+    "send": "Gönder",
+    "noConversations": "Henüz konuşma bulunmuyor",
+    "startConversation": "Konuşma başlat"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı",
+    "cancel": "İptal",
+    "confirm": "Onayla",
+    "save": "Kaydet",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "back": "Geri",
+    "next": "İleri",
+    "done": "Tamam",
+    "retry": "Tekrar Dene"
+  },
+  "navigation": {
+    "marketplace": "Pazar",
+    "chat": "Mesajlar",
+    "profile": "Profil",
+    "diagnostics": "Teşhis"
+  }
+}
