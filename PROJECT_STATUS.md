@@ -1,6 +1,6 @@
 # ZİRAVE - Project Status & Roadmap (Supabase Edition)
 
-## Last Update: 2025-01-11 (Task 1.1.4 Complete)
+## Last Update: 2025-01-11 (Task 1.1.5 Complete)
 
 ---
 
@@ -27,7 +27,7 @@ ZİRAVE is a comprehensive digital ecosystem for the agricultural sector, connec
         **[✓] 1.1.2:** Initialize React Native project (`/mobile`).
         **[✓] 1.1.3:** Initialize Next.js project (`/web-dashboard`).
         **[✓] 1.1.4:** Initialize NestJS project (`/backend-custom`).
-        **[ ] 1.1.5:** Install Supabase CLI and initialize Supabase project (`/supabase`). This will contain DB migrations.
+        **[✓] 1.1.5:** Install Supabase CLI and initialize Supabase project (`/supabase`). This will contain DB migrations.
         **[ ] 1.1.6:** Create a central `.env` file with placeholders for Supabase URL and ANON_KEY.
     **[ ] 1.2: Supabase Schema & Database Setup**
         **[ ] 1.2.1:** Create first database migration in `/supabase/migrations` to define core tables: `profiles` (with roles), `products`, `conversations`, `messages`.
