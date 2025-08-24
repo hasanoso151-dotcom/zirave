@@ -33,14 +33,20 @@
     "title": "Marketplace",
     "search": "Search products...",
     "categories": "Categories",
+    "allCategories": "All",
     "myProducts": "My Products",
     "addProduct": "Add Product",
+    "addFirstProduct": "Add the first product",
     "productName": "Product Name",
     "description": "Description",
     "price": "Price",
     "category": "Category",
     "noProducts": "No products found",
-    "contactSeller": "Contact Seller"
+    "noSearchResults": "No search results found",
+    "contactSeller": "Contact Seller",
+    "freshProducts": "Fresh Products",
+    "organicProducts": "Organic Products",
+    "localFarmers": "Local Farmers"
   },
   "chat": {
     "title": "Messages",
@@ -62,7 +68,10 @@
     "back": "Back",
     "next": "Next",
     "done": "Done",
-    "retry": "Retry"
+    "retry": "Retry",
+    "unit": "kg",
+    "piece": "piece",
+    "liter": "liter"
   },
   "navigation": {
     "marketplace": "Market",

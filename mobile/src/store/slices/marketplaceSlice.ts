@@ -42,6 +42,31 @@ export const fetchProducts = createAsyncThunk(
   }
 );
 
+export const searchProducts = createAsyncThunk(
+  'marketplace/searchProducts',
+  async ({ query, category }: { query: string; category?: string }, { rejectWithValue }) => {
+    try {
+      let supabaseQuery = supabase
+        .from('products')
+        .select('*')
+        .eq('is_active', true)
+        .or(`name.ilike.%${query}%,description.ilike.%${query}%`)
+        .order('created_at', { ascending: false });
+
+      if (category) {
+        supabaseQuery = supabaseQuery.eq('category', category);
+      }
+
+      const { data, error } = await supabaseQuery;
+      
+      if (error) throw error;
+      return data as Product[];
+    } catch (error: any) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
 export const fetchMyProducts = createAsyncThunk(
   'marketplace/fetchMyProducts',
   async (supplierId: string, { rejectWithValue }) => {

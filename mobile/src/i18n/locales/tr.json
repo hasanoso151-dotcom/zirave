@@ -33,14 +33,20 @@
     "title": "Pazar Yeri",
     "search": "Ürün ara...",
     "categories": "Kategoriler",
+    "allCategories": "Tümü",
     "myProducts": "Ürünlerim",
     "addProduct": "Ürün Ekle",
+    "addFirstProduct": "İlk ürünü ekleyin",
     "productName": "Ürün Adı",
     "description": "Açıklama",
     "price": "Fiyat",
     "category": "Kategori",
     "noProducts": "Henüz ürün bulunmuyor",
-    "contactSeller": "Satıcıyla İletişime Geç"
+    "noSearchResults": "Arama sonucu bulunamadı",
+    "contactSeller": "Satıcıyla İletişime Geç",
+    "freshProducts": "Taze Ürünler",
+    "organicProducts": "Organik Ürünler",
+    "localFarmers": "Yerel Çiftçiler"
   },
   "chat": {
     "title": "Mesajlar",
@@ -62,7 +68,10 @@
     "back": "Geri",
     "next": "İleri",
     "done": "Tamam",
-    "retry": "Tekrar Dene"
+    "retry": "Tekrar Dene",
+    "unit": "kg",
+    "piece": "adet",
+    "liter": "litre"
   },
   "navigation": {
     "marketplace": "Pazar",
