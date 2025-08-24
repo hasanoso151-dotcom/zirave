@@ -1,6 +1,7 @@
 # ZİRAVE - Project Status & Roadmap (Supabase Edition)
 
 ## Last Update: 2025-01-11 (Task 1.1.5 Complete)
+## Last Update: 2025-01-11 (Task 1.1.6 Complete)
 
 ---
 
@@ -28,7 +29,7 @@ ZİRAVE is a comprehensive digital ecosystem for the agricultural sector, connec
         **[✓] 1.1.3:** Initialize Next.js project (`/web-dashboard`).
         **[✓] 1.1.4:** Initialize NestJS project (`/backend-custom`).
         **[✓] 1.1.5:** Install Supabase CLI and initialize Supabase project (`/supabase`). This will contain DB migrations.
-        **[ ] 1.1.6:** Create a central `.env` file with placeholders for Supabase URL and ANON_KEY.
+        **[✓] 1.1.6:** Create a central `.env` file with placeholders for Supabase URL and ANON_KEY.
     **[ ] 1.2: Supabase Schema & Database Setup**
         **[ ] 1.2.1:** Create first database migration in `/supabase/migrations` to define core tables: `profiles` (with roles), `products`, `conversations`, `messages`.
         **[ ] 1.2.2:** Enable Phone-based Authentication in the Supabase dashboard settings.
@@ -60,13 +61,13 @@ ZİRAVE is a comprehensive digital ecosystem for the agricultural sector, connec
 ---
 
 ## Current Focus  
-Phase 1.1 Progress: NestJS Backend initialized - Ready for Supabase project setup
+Phase 1.1 Complete: All scaffolding and Supabase setup finished - Ready for mobile app integration
 
 ## Next Actions
-1. Initialize Supabase project structure with database migrations
-2. Create central `.env` file with Supabase placeholders
-3. Initialize Supabase project structure with database migrations
-4. Setup Supabase authentication and RLS policies
+1. Complete mobile app Supabase integration (Phase 1.3)
+2. Setup database schema and RLS policies (Phase 1.2)
+3. Begin marketplace development (Phase 2.1)
+4. Implement real-time chat system (Phase 2.2)
 
 ---
 
