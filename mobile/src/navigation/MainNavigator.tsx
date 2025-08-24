@@ -13,6 +13,7 @@ import ChatListScreen from '../screens/chat/ChatListScreen';
 import ChatScreen from '../screens/chat/ChatScreen';
 import ProfileScreen from '../screens/profile/ProfileScreen';
 import DiagnosticsScreen from '../screens/diagnostics/DiagnosticsScreen';
+import TransportationScreen from '../screens/transportation/TransportationScreen';
 
 export type MainStackParamList = {
   MainTabs: undefined;
@@ -25,6 +26,7 @@ export type MainStackParamList = {
 export type MainTabParamList = {
   Marketplace: undefined;
   Chat: undefined;
+  Transportation: undefined;
   Diagnostics: undefined;
   Profile: undefined;
 };
@@ -47,6 +49,9 @@ const MainTabs: React.FC = () => {
               break;
             case 'Chat':
               iconName = 'chat';
+              break;
+            case 'Transportation':
+              iconName = 'local-shipping';
               break;
             case 'Diagnostics':
               iconName = 'local-hospital';
@@ -74,6 +79,11 @@ const MainTabs: React.FC = () => {
         name="Chat" 
         component={ChatListScreen}
         options={{ tabBarLabel: t('navigation.chat') }}
+      />
+      <Tab.Screen 
+        name="Transportation" 
+        component={TransportationScreen}
+        options={{ tabBarLabel: 'Nakliye' }}
       />
       <Tab.Screen 
         name="Diagnostics" 
