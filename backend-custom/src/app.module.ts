@@ -7,6 +7,7 @@ import { UsersModule } from './users/users.module';
 import { ProductsModule } from './products/products.module';
 import { ChatModule } from './chat/chat.module';
 import { SupabaseModule } from './supabase/supabase.module';
+import { AiModule } from './ai/ai.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { SupabaseModule } from './supabase/supabase.module';
     UsersModule,
     ProductsModule,
     ChatModule,
+    AiModule,
   ],
   controllers: [AppController],
   providers: [AppService],
