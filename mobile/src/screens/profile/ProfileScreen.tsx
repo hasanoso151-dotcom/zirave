@@ -9,12 +9,18 @@ import {
 } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { RootState, AppDispatch } from '../../store';
 import { signOut } from '../../store/slices/authSlice';
+import { MainStackParamList } from '../../navigation/MainNavigator';
+
+type ProfileScreenNavigationProp = StackNavigationProp<MainStackParamList>;
 
 const ProfileScreen: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
+  const navigation = useNavigation<ProfileScreenNavigationProp>();
   const { user, profile } = useSelector((state: RootState) => state.auth);
   const { t } = useTranslation();
 
@@ -64,11 +70,16 @@ const ProfileScreen: React.FC = () => {
           <Icon name="chevron-right" size={24} color="#757575" />
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.menuItem}>
-          <Icon name="store" size={24} color="#757575" />
-          <Text style={styles.menuItemText}>{t('marketplace.myProducts')}</Text>
-          <Icon name="chevron-right" size={24} color="#757575" />
-        </TouchableOpacity>
+        {profile?.role === 'SUPPLIER' && (
+          <TouchableOpacity 
+            style={styles.menuItem}
+            onPress={() => navigation.navigate('MyProducts')}
+          >
+            <Icon name="store" size={24} color="#757575" />
+            <Text style={styles.menuItemText}>{t('marketplace.myProducts')}</Text>
+            <Icon name="chevron-right" size={24} color="#757575" />
+          </TouchableOpacity>
+        )}
 
         <TouchableOpacity style={styles.menuItem}>
           <Icon name="settings" size={24} color="#757575" />

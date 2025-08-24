@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import MarketplaceScreen from '../screens/marketplace/MarketplaceScreen';
 import ProductDetailScreen from '../screens/marketplace/ProductDetailScreen';
 import MyProductsScreen from '../screens/marketplace/MyProductsScreen';
+import AddProductScreen from '../screens/marketplace/AddProductScreen';
 import ChatListScreen from '../screens/chat/ChatListScreen';
 import ChatScreen from '../screens/chat/ChatScreen';
 import ProfileScreen from '../screens/profile/ProfileScreen';
@@ -16,6 +17,8 @@ import DiagnosticsScreen from '../screens/diagnostics/DiagnosticsScreen';
 export type MainStackParamList = {
   MainTabs: undefined;
   ProductDetail: { productId: string };
+  MyProducts: undefined;
+  AddProduct: undefined;
   Chat: { conversationId: string; participantName: string };
 };
 
@@ -98,6 +101,16 @@ const MainNavigator: React.FC = () => {
         name="ProductDetail" 
         component={ProductDetailScreen}
         options={{ title: 'Ürün Detayı' }}
+      />
+      <Stack.Screen 
+        name="MyProducts" 
+        component={MyProductsScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen 
+        name="AddProduct" 
+        component={AddProductScreen}
+        options={{ headerShown: false }}
       />
       <Stack.Screen 
         name="Chat" 
